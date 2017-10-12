@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Instagram auto like",
+  "description": "This extension allow automatically like pictures in the instagram.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here to auto like!"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.instagram.com/*"],
+    "js": ["content.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
